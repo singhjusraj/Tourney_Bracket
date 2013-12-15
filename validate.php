@@ -1,7 +1,7 @@
 <!--
 File Name: validate.php
 
-Author's Name: Sukhdeep Singh
+Author's Name: Sukhdeep Singh, Nav Bhulllar
 
 Web Site Name: Tourney Bracket
 

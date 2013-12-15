@@ -1,3 +1,12 @@
+<!--
+File Name: header.php
+
+Author's Name: Sukhdeep Singh, Nav Bhullar
+
+Web Site Name: Tourney Bracket
+
+File Description: This Page Contains the Consistent Nav Bar for the Site
+-->
 <!DOCTYPE html>
 <html lang="en">
 	<head>

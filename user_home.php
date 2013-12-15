@@ -1,3 +1,12 @@
+<!--
+File Name: user_home.php
+
+Author's Name: Sukhdeep Singh, Nav Bhullar
+
+Web Site Name: Tourney Bracket
+
+File Description: This page is the first page when the user loggs into the Site which Gives the user options to Logout, Create a new tournament, or Modify the existing tournaments
+-->
 <?php
 
 	//access current session
@@ -9,12 +18,31 @@
 		
 	} 
 	else {
-require_once 'header.php';
+		$conn = mysqli_connect('webdesign4', 'db200245935', '37949', 'db200245935') or die('Error connecting to MySQL server');
+		$userID = $_SESSION['user_id'];
+		$sql = "SELECT email,username FROM tourney_admins where id = $userID";
+		$email = mysqli_query($conn, $sql);
+		while ($address = mysqli_fetch_array($email)) {
+							$emailAddress = $address['email'];
+							$user = $address['username'];
+		}
+		mysqli_close($conn);
+		require_once 'header.php';
 ?>
+<h1>Welcome <?php echo $user; ?>!</h1>;
 <hr class="featurette-divider">
+
+<!--Logout Button-->
 <a href="logout.php" role="button" class="btn btn-primary btn-lg">Logout</a>
+
 <hr class="featurette-divider">
-<a href="#" role="button"  class="btn btn-primary btn-lg pull-right">Modify Existing</a>
+
+<!--Modify Existing Button-->
+<button class="btn btn-primary btn-lg pull-right" data-toggle="modal" data-target="#tournamentModal">
+		Modify Existing
+	</button>
+	
+<!--Create New Tournament Form-->	
 <h1>Create a New Tournament</h1>
 
 <hr class="featurette-divider">
@@ -89,6 +117,34 @@ require_once 'header.php';
 	</button>
 </form>
 <hr class="featurette-divider">
+	
+<!-- Existing Tournaments Modal -->
+<div class="modal fade" id="tournamentModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+					&times;
+				</button>
+				<h4 class="modal-title" id="myModalLabel">Choose Tournament</h4>
+			</div>
+			<div class="modal-body">
+				<?php
+				$conn = mysqli_connect('webdesign4', 'db200245935', '37949', 'db200245935') or die('Error connecting to MySQL server');
+				$query = 'SELECT id,tourname FROM `tournaments` where `owneremail` = "'.$emailAddress.'"';
+				
+				$tournaments = mysqli_query($conn, $query);				
+				while ($row = mysqli_fetch_array($tournaments)) 
+				{
+					echo'<a href="Modify.php?id='.$row['id'].'" role="button" class="btn btn-primary btn-lg">'.$row['tourname'] .'</a>';
+				}
+				mysqli_close($conn);
+			?>
+
+			</div>			
+		</div><!-- /.modal-content -->
+	</div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
 
 <?php
 }

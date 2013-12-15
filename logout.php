@@ -1,7 +1,7 @@
 <!--
 File Name: logout.php
 
-Author's Name: Sukhdeep Singh
+Author's Name: Sukhdeep Singh, Nav Bhullar
 
 Web Site Name: Tourney Bracket
 

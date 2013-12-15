@@ -1,3 +1,12 @@
+<!--
+File Name: index.php
+
+Author's Name: Sukhdeep Singh, Nav Bhullar
+
+Web Site Name: Tourney Bracket
+
+File Description: This is a home page for the Site Which Gives user the overview of the site and and includes the forms for User sign up and login
+-->
 <?php
 require_once 'header.php';
 ?>
@@ -18,7 +27,7 @@ require_once 'header.php';
 	</button>
 </div>
 
-<!-- Modal -->
+<!-- Sign Up Modal -->
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 	<div class="modal-dialog">
 		<div class="modal-content">
@@ -63,9 +72,9 @@ require_once 'header.php';
 			</div>
 		</div><!-- /.modal-content -->
 	</div><!-- /.modal-dialog -->
-</div><!-- /.modal -->
+</div><!-- Sign Up modal -->
 
-<!-- Modal -->
+<!-- Login Modal -->
 <div class="modal fade" id="signInModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 	<div class="modal-dialog">
 		<div class="modal-content">
@@ -104,7 +113,7 @@ require_once 'header.php';
 			</div>
 		</div><!-- /.modal-content -->
 	</div><!-- /.modal-dialog -->
-</div><!-- /.modal -->
+</div><!-- Login modal -->
 
 <?php
 require_once 'footer.php';

@@ -1,3 +1,12 @@
+<!--
+File Name: Register.php
+
+Author's Name: Sukhdeep Singh, Nav Bhullar
+
+Web Site Name: Tourney Bracket
+
+File Description: This Page Takes the input from the Sign Up Model from Index.php page and Completes the user registration
+-->
 <!DOCTYPE html>
 <html>
 	<head>
@@ -31,6 +40,8 @@
                     $exist = true;
                 }
             }
+			//the new user should have a unique email address
+			//i.e. Two Users cannot have same email address
             if($exist){
             	echo '<div class="alert alert-danger alert-dismissable">';			
 			echo'<strong>Email Address Already Exists!</strong> Please Try with Different Email Address..';
@@ -38,10 +49,13 @@
 			echo'<a href="index.php" class="btn btn-danger btn-lg " role="button">Close</a></p>';
                 
             }
+			//register the user
             else{
 			$sql = "INSERT INTO tourney_admins (username, password, email) VALUES('$username','$password','$email')";
 			mysqli_query($conn, $sql) or die('Error querying database.');			
 			mysqli_close($conn);
+			
+			//show the success dialog
 			echo '<div class="alert alert-success alert-dismissable">';			
 			echo'<strong>User Successfully Registered!</strong>';
 			echo'</div>';

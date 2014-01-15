@@ -10,7 +10,7 @@ File Description: This page Displays the list of the activated Tournaments to an
 <?php
 include_once ('header.php');
 
-$conn = mysqli_connect('webdesign4', 'db200245935', '37949', 'db200245935') or die('Error connecting to MySQL server');
+$conn = mysqli_connect('webdesign4', 'dbxxxxxxxxx', 'xxxxx', 'dbxxxxxxxxx') or die('Error connecting to MySQL server');
 $query = "SELECT * FROM tournaments";
 $result = mysqli_query($conn, $query);
 while ($row = mysqli_fetch_array($result)) {

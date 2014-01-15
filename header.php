@@ -57,7 +57,7 @@ File Description: This Page Contains the Consistent Nav Bar for the Site
 
 					if (empty($_SESSION['user_id'])) {
 					} else {
-						$conn = mysqli_connect('webdesign4', 'db200245935', '37949', 'db200245935') or die('Error connecting to MySQL server');
+						$conn = mysqli_connect('webdesign4', 'dbxxxxxxxxx', 'xxxxx', 'dbxxxxxxxxx') or die('Error connecting to MySQL server');
 						$query = "SELECT * FROM tourney_admins";
 						$userID = $_SESSION['user_id'];
 						$sql = "SELECT email,username FROM tourney_admins where id = $userID";

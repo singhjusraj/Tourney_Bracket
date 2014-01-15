@@ -27,13 +27,13 @@ File Description: This page takes the input from the final.php page and makes th
 				header('Location:index.php');
 			} else {
 
-				$conn = mysqli_connect('webdesign4', 'db200245935', '37949', 'db200245935') or die('Error connecting to MySQL server');
+				$conn = mysqli_connect('webdesign4', 'dbxxxxxxxxx', 'xxxxx', 'dbxxxxxxxxx') or die('Error connecting to MySQL server');
 
 				$winner = $_POST['winner'];				
 				
 				$id = $_POST['id'];	
 
-				$conn = mysqli_connect('webdesign4', 'db200245935', '37949', 'db200245935') or die('Error connecting to MySQL server');
+				$conn = mysqli_connect('webdesign4', 'dbxxxxxxxxx', 'xxxxx', 'dbxxxxxxxxx') or die('Error connecting to MySQL server');
 
 				$query = 'UPDATE tournaments SET winner = "'.$winner.'" WHERE id = "'.$id.'"';
 				mysqli_query($conn, $query) or die('Error querying database.');

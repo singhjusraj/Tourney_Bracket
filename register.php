@@ -30,7 +30,7 @@ File Description: This Page Takes the input from the Sign Up Model from Index.ph
 		//check that the email entered is a proper valid email address
 		if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
 
-		$conn = mysqli_connect('webdesign4', 'db200245935', '37949', 'db200245935') or die('Error connecting to MySQL server');
+		$conn = mysqli_connect('webdesign4', 'dbxxxxxxxxx', 'xxxxx', 'dbxxxxxxxxx') or die('Error connecting to MySQL server');
 			 $query = "SELECT * FROM tourney_admins";
 			  $result = mysqli_query($conn, $query);
             //check if the email address already exists or not. If yes, Display the error message. If no, Register the user.

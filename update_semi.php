@@ -24,14 +24,14 @@ File Description: This page Takes the input from the semi_final.php page and mak
 				header('Location:index.php');
 			} else {
 
-				$conn = mysqli_connect('webdesign4', 'db200245935', '37949', 'db200245935') or die('Error connecting to MySQL server');
+				$conn = mysqli_connect('webdesign4', 'dbxxxxxxxxx', 'xxxxx', 'dbxxxxxxxxx') or die('Error connecting to MySQL server');
 
 				$semi1 = $_POST['semi1'];
 				$semi2 = $_POST['semi2'];
 				
 				$id = $_POST['id'];	
 
-				$conn = mysqli_connect('webdesign4', 'db200245935', '37949', 'db200245935') or die('Error connecting to MySQL server');
+				$conn = mysqli_connect('webdesign4', 'dbxxxxxxxxx', 'xxxxx', 'dbxxxxxxxxx') or die('Error connecting to MySQL server');
 
 				$query = 'UPDATE tournaments SET semi1 = "'.$semi1.'", semi2 = "'.$semi2.'" WHERE id = "'.$id.'"';
 				mysqli_query($conn, $query) or die('Error querying database.');

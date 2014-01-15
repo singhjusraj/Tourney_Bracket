@@ -18,7 +18,7 @@ File Description: This page is the first page when the user loggs into the Site 
 		
 	} 
 	else {
-		$conn = mysqli_connect('webdesign4', 'db200245935', '37949', 'db200245935') or die('Error connecting to MySQL server');
+		$conn = mysqli_connect('webdesign4', 'dbxxxxxxxxx', 'xxxxx', 'dbxxxxxxxxx') or die('Error connecting to MySQL server');
 		$userID = $_SESSION['user_id'];
 		$sql = "SELECT email,username FROM tourney_admins where id = $userID";
 		$email = mysqli_query($conn, $sql);

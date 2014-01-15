@@ -17,7 +17,7 @@ File Description: This Page Lets the logged in user Hide or Show the tournament 
 require_once 'header.php';
 //grab the selected id from the url
 $id = $_GET['id'];
-$conn = mysqli_connect('webdesign4', 'db200245935', '37949', 'db200245935') or die('Error connecting to MySQL server');
+$conn = mysqli_connect('webdesign4', 'dbxxxxxxxxx', 'xxxxx', 'dbxxxxxxxxx') or die('Error connecting to MySQL server');
 $query = 'SELECT * FROM tournaments WHERE id ="'.$id.'"';
 $result = mysqli_query($conn, $query);
 while ($row = mysqli_fetch_array($result)) {

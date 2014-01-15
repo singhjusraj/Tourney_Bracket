@@ -29,7 +29,7 @@ File Description: This Page Takes the input from the User_home.php page and Inse
 			}
 			else {
 				
-			$conn = mysqli_connect('webdesign4', 'db200245935', '37949', 'db200245935') or die('Error connecting to MySQL server');
+			$conn = mysqli_connect('webdesign4', 'dbxxxxxxxxx', 'xxxxx', 'dbxxxxxxxxx') or die('Error connecting to MySQL server');
 			//obtain the incoming inputs from user_home.php page							
 			$tourname = mysqli_real_escape_string($conn, $_POST['tourname']);
 			$desc = mysqli_real_escape_string($conn, $_POST['desc']);
@@ -46,7 +46,7 @@ File Description: This Page Takes the input from the User_home.php page and Inse
 			$visible = "true";
 			$TBD = "TBD";
 
-			$conn = mysqli_connect('webdesign4', 'db200245935', '37949', 'db200245935') or die('Error connecting to MySQL server');
+			$conn = mysqli_connect('webdesign4', 'dbxxxxxxxxx', 'xxxxx', 'dbxxxxxxxxx') or die('Error connecting to MySQL server');
 			$query = "SELECT tourname FROM tournaments";
 			$result = mysqli_query($conn, $query);
 			//check if the Tournament already exists or not. If yes, Display the error message. If no, Register the Tournament.
